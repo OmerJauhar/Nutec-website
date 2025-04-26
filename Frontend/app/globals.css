@@ -1,0 +1,241 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+
+    /* Custom colors */
+    --deep-space: 232 95% 6%;
+    --cyan: 181 100% 50%;
+    --magenta: 300 100% 50%;
+    --yellow: 56 100% 50%;
+    --dark-grey: 0 0% 10%;
+  }
+
+  .dark {
+    --background: 232 95% 6%;
+    --foreground: 210 40% 98%;
+    --card: 232 95% 4%;
+    --card-foreground: 210 40% 98%;
+    --popover: 232 95% 3%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-orbitron;
+  }
+  h2,
+  h3 {
+    @apply font-rajdhani;
+  }
+  p,
+  span,
+  div {
+    @apply font-exo2;
+  }
+}
+
+/* Custom classes */
+@layer components {
+  .text-gradient-cyan-magenta {
+    @apply bg-gradient-to-r from-cyan to-magenta bg-clip-text text-transparent;
+  }
+
+  .text-gradient-magenta-yellow {
+    @apply bg-gradient-to-r from-magenta to-yellow bg-clip-text text-transparent;
+  }
+
+  .text-gradient-yellow-cyan {
+    @apply bg-gradient-to-r from-yellow to-cyan bg-clip-text text-transparent;
+  }
+
+  .btn-gradient {
+    @apply bg-gradient-to-r from-magenta to-cyan hover:from-cyan hover:to-magenta transition-all duration-300;
+  }
+
+  .btn-solid {
+    @apply bg-[#4A2A82] hover:bg-[#5A3A92] text-white transition-all duration-300;
+  }
+}
+
+.neon-border {
+  box-shadow: 0 0 5px #00f7ff, 0 0 10px #00f7ff, 0 0 15px #00f7ff;
+}
+
+.neon-text-cyan {
+  text-shadow: 0 0 5px #00f7ff, 0 0 10px #00f7ff, 0 0 15px #00f7ff;
+}
+
+.neon-text-magenta {
+  text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff;
+}
+
+.neon-text-yellow {
+  text-shadow: 0 0 5px #fff000, 0 0 10px #fff000, 0 0 15px #fff000;
+}
+
+.section-divider {
+  height: 50px;
+  background: linear-gradient(
+    135deg,
+    transparent 25%,
+    #1a1a1a 25%,
+    #1a1a1a 50%,
+    transparent 50%,
+    transparent 75%,
+    #1a1a1a 75%
+  );
+  background-size: 20px 20px;
+}
+
+.glitch {
+  position: relative;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -1px 0 #ff00ff;
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: -1px 0 #00f7ff;
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim 5s infinite linear alternate-reverse;
+  animation-delay: 0.15s;
+}
+
+@keyframes glitch-anim {
+  0% {
+    clip: rect(31px, 9999px, 94px, 0);
+  }
+  10% {
+    clip: rect(112px, 9999px, 76px, 0);
+  }
+  20% {
+    clip: rect(85px, 9999px, 77px, 0);
+  }
+  30% {
+    clip: rect(27px, 9999px, 97px, 0);
+  }
+  40% {
+    clip: rect(64px, 9999px, 98px, 0);
+  }
+  50% {
+    clip: rect(61px, 9999px, 85px, 0);
+  }
+  60% {
+    clip: rect(99px, 9999px, 114px, 0);
+  }
+  70% {
+    clip: rect(34px, 9999px, 115px, 0);
+  }
+  80% {
+    clip: rect(98px, 9999px, 129px, 0);
+  }
+  90% {
+    clip: rect(43px, 9999px, 96px, 0);
+  }
+  100% {
+    clip: rect(82px, 9999px, 64px, 0);
+  }
+}
+
+.holographic {
+  background: linear-gradient(135deg, rgba(255, 0, 255, 0.5), rgba(0, 247, 255, 0.5), rgba(255, 240, 0, 0.5));
+  background-size: 200% 200%;
+  animation: holographic 5s ease infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes holographic {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.particle {
+  position: absolute;
+  background-color: #00f7ff;
+  border-radius: 50%;
+  opacity: 0;
+  animation: particle-animation 1s ease-out;
+}
+
+@keyframes particle-animation {
+  0% {
+    transform: scale(0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
