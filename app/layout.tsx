@@ -64,10 +64,10 @@ const exo2 = localFont({
 })
 
 export const metadata = {
-  title: "NUTEC 2024 | KPK's Biggest Olympiad",
+  title: "NUTEC 2025 | KPK's Biggest Olympiad",
   description:
-    "Join KPK's Biggest Tech Olympiad - NUTEC 2024. May 2-4, 2024. Featuring coding competitions, tech showcases, and more.",
-    generator: 'v0.dev'
+    "Join KPK's Biggest Tech Olympiad - NUTEC 2025. May 2-4, 2025. Featuring coding competitions, tech showcases, and more.",
+    generator: 'FOSLX'
 }
 
 export default function RootLayout({
