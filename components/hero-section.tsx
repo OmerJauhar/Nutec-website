@@ -97,10 +97,16 @@ export default function HeroSection() {
               className="animate-float flex justify-center"
             >
               <Button
+                asChild
                 className="bg-[#4A2A82] hover:bg-[#5A3A92] text-white font-orbitron text-base px-6 py-5 rounded-md shadow-lg hover:shadow-xl transition-all duration-300"
-                size="md"
               >
-                BUY TICKETS
+                <a
+                  href="https://forms.gle/QabqJjTv14HpK46t5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  BUY TICKETS
+                </a>
               </Button>
             </motion.div>
           </div>

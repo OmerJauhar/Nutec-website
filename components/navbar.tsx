@@ -14,7 +14,7 @@ export default function Navbar() {
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Stats", href: "#stats" },
-    { name: "Gallery", href: "#gallery" },
+    { name: "Events", href: "#gallery" },
     { name: "TEDx", href: "#tedx" },
     { name: "Venue", href: "#venue" },
   ]
@@ -38,7 +38,9 @@ export default function Navbar() {
                 {item.name}
               </Link>
             ))}
-            <Button className="bg-[#4A2A82] hover:bg-[#5A3A92] text-white font-orbitron">Buy Tickets</Button>
+            <Button asChild className="bg-[#4A2A82] hover:bg-[#5A3A92] text-white font-orbitron">
+              <a href="https://forms.gle/QabqJjTv14HpK46t5" target="_blank" rel="noopener noreferrer">Buy Tickets</a>
+            </Button>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -73,7 +75,9 @@ export default function Navbar() {
                     {item.name}
                   </Link>
                 ))}
-                <Button className="bg-[#4A2A82] hover:bg-[#5A3A92] text-white font-orbitron mt-4">Buy Tickets</Button>
+                <Button asChild className="bg-[#4A2A82] hover:bg-[#5A3A92] text-white font-orbitron mt-4">
+                  <a href="https://forms.gle/QabqJjTv14HpK46t5" target="_blank" rel="noopener noreferrer">Buy Tickets</a>
+                </Button>
               </nav>
             </div>
           </motion.div>

@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { ExternalLink, Calendar, Users, Lightbulb } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function TedxSection() {
   return (
@@ -20,7 +21,7 @@ export default function TedxSection() {
             Special Feature
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            <span className="text-[#e62b1e]">TEDx</span>FASTpeshawar
+            <span className="text-[#e62b1e]">TEDx</span>FASTPeshawar
           </h2>
           <p className="max-w-2xl mx-auto text-lg text-gray-300 font-exo2">
             Ideas worth spreading from the heart of KPK
@@ -94,15 +95,17 @@ export default function TedxSection() {
                   <Lightbulb className="h-5 w-5 text-[#e62b1e]" />
                 </div>
                 <div>
-                  <h4 className="text-white font-rajdhani font-bold text-lg">Theme: "Future Forward"</h4>
+                  <h4 className="text-white font-rajdhani font-bold text-lg">Theme: "Echoes of Tomorrow"</h4>
                   <p className="text-gray-400 text-sm">Exploring innovations that will shape our tomorrow</p>
                 </div>
               </div>
             </div>
 
-            <Button className="bg-[#e62b1e] hover:bg-[#c4251a] text-white font-rajdhani flex items-center gap-2">
-              Learn More <ExternalLink className="h-4 w-4" />
-            </Button>
+            <Link href="https://www.instagram.com/tedxfastpwr?igsh=MW9mcHg5YmhhcGszdA==" target="_blank" rel="noopener noreferrer">
+              <Button className="bg-[#e62b1e] hover:bg-[#c4251a] text-white font-rajdhani flex items-center gap-2">
+                Learn More <ExternalLink className="h-4 w-4" />
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </div>

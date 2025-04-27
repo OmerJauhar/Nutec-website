@@ -52,11 +52,10 @@ export default function Footer() {
               innovation, and collaboration.
             </p>
             <div className="flex space-x-4">
-              <SocialIcon icon={<Facebook size={18} />} />
-              <SocialIcon icon={<Twitter size={18} />} />
-              <SocialIcon icon={<Instagram size={18} />} />
-              <SocialIcon icon={<Linkedin size={18} />} />
-              <SocialIcon icon={<Github size={18} />} />
+              <SocialIcon icon={<Facebook size={18} />} href="https://www.facebook.com/share/15f8r9UZWq/" />
+              {/* <SocialIcon icon={<Twitter size={18} />} /> */}
+              <SocialIcon icon={<Instagram size={18} />} href="https://www.instagram.com/nutec_pwr?igsh=bm45NXA4OHBwa3Ey" />
+              {/* <SocialIcon icon={<Linkedin size={18} />} /> */}
             </div>
           </div>
 
@@ -66,7 +65,7 @@ export default function Footer() {
               <FooterLink href="#home">Home</FooterLink>
               <FooterLink href="#about">About</FooterLink>
               <FooterLink href="#stats">Stats</FooterLink>
-              <FooterLink href="#gallery">Gallery</FooterLink>
+              <FooterLink href="#gallery">Events</FooterLink>
               <FooterLink href="#tedx">TEDx</FooterLink>
               <FooterLink href="#venue">Venue</FooterLink>
             </ul>
@@ -77,11 +76,11 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <Mail className="text-cyan mr-3 mt-1 flex-shrink-0" size={18} />
-                <span className="text-gray-300">info@nutec.com</span>
+                <span className="text-gray-300">nutec.pwr@nu.edu.pk</span>
               </li>
               <li className="flex items-start">
                 <Phone className="text-cyan mr-3 mt-1 flex-shrink-0" size={18} />
-                <span className="text-gray-300">+92 123 456 7890</span>
+                <span className="text-gray-300">++92 319 4950124</span>
               </li>
               <li className="flex items-start">
                 <MapPin className="text-cyan mr-3 mt-1 flex-shrink-0" size={18} />
@@ -234,10 +233,10 @@ export default function Footer() {
   )
 }
 
-function SocialIcon({ icon }: { icon: React.ReactNode }) {
+function SocialIcon({ icon, href }: { icon: React.ReactNode; href?: string }) {
   return (
     <a
-      href="#"
+      href={href}
       className="w-8 h-8 rounded-full bg-dark-grey flex items-center justify-center text-gray-300 hover:text-cyan hover:bg-cyan/10 transition-colors duration-300"
     >
       {icon}

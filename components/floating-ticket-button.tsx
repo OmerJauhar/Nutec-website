@@ -31,11 +31,18 @@ export default function FloatingTicketButton() {
           className={`fixed z-50 ${isMobile ? "bottom-4 right-4" : "bottom-8 right-8"}`}
         >
           <Button
+            asChild
             className="bg-[#4A2A82] hover:bg-[#5A3A92] text-white font-orbitron rounded-full shadow-lg hover:shadow-cyan/20 group"
             size="lg"
           >
-            <Ticket className="mr-2 h-4 w-4 group-hover:animate-pulse" />
-            {isMobile ? "" : "Buy Tickets"}
+            <a
+              href="https://forms.gle/QabqJjTv14HpK46t5"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Ticket className="mr-2 h-4 w-4 group-hover:animate-pulse" />
+              {isMobile ? "" : "Buy Tickets"}
+            </a>
           </Button>
         </motion.div>
       )}
